@@ -81,9 +81,9 @@ export default class FeedBack{
         }));
     }
     async getFeeedbackCompleted(element){
-        let feedbackComplete = await this.feedbacks;
+        let feedbackComplet = await this.feedbacks;
         element.innerHTML = '';
-        await Promise.all(feedbackComplete.map(async (feedbackComplete) =>{
+        await Promise.all(feedbackComplet.map(async (feedbackComplete) =>{
             if(feedbackComplete.total_skills == feedbackComplete.evaluated_skills){
                 let userInfo = await fetch(`https://matter-app.herokuapp.com/api/v1/users/${feedbackComplete.user_invited_id}`);
                 let parseInfo= await userInfo.json();

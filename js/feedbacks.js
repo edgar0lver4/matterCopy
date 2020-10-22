@@ -66,7 +66,7 @@ export default class FeedBack{
         }));
     }
     async getFeedbackPending(element){
-        let feedbackPending = await this.invitations;
+        let feedbackPending = await this.feedbacks;
         element.innerHTML = '';
         await Promise.all(feedbackPending.map(async (invitationPending) =>{
             if(invitationPending.total_skills > invitationPending.evaluated_skills){

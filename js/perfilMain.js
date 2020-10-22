@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded',()=>{
         let feedback2 = feedback.initFeedback();
         feedback2[0].then(()=>{
             feedback.getAllFeedbacks(viewAllRequest);
+            feedback.getFeedbackPending(viewRequestPending);
         });
         feedback2[1].then(()=>{
             feedback.getFeedbackRecived(viewRequestRecived);
-            feedback.getFeedbackPending(viewRequestPending);
             feedback.getFeeedbackCompleted(viewRequestComplete);
         })
         //ui.getAllRequest(localStorage.getItem("Id"),viewAllRequest);

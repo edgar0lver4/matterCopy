@@ -68,6 +68,10 @@ async function valueSkill(invitationId,idSkill,score,idElem){
 function decreaseTotalSkill(){
     let total = document.getElementById('totalSkillsEvaluate').getAttribute("matter-sk-total");
     ntotal = parseInt(total)-1;
+    if(ntotal <= 0){
+        ntotal = 0;
+        document.getElementById('returnHome').innerHTML = '<a href="./perfil.html">Return to home</a>';
+    }
     document.getElementById('totalSkillsEvaluate').innerHTML = ntotal;
     document.getElementById("totalSkillsEvaluate").removeAttribute("matter-sk-total");
     document.getElementById("totalSkillsEvaluate").setAttribute("matter-sk-total",ntotal);

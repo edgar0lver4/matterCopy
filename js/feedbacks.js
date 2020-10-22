@@ -90,6 +90,7 @@ export default class FeedBack{
                 const invitations = `<div class="col-12">
                                         <div class="col-12"><h3>${parseInfo.name}</h3></div>
                                         <div class="col-12">Sended since: ${feedbackComplete.created_at}</div>
+                                        <div class="col-12"><a href="javascript:void(0);" onclick="viewInvitationEvaluated(${feedbackComplete.id})">View feedback</a></div>
                                     </div>`;
                 element.innerHTML += invitations;
             }

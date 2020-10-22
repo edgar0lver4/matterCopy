@@ -100,7 +100,7 @@ async function viewInvitationEvaluated(idInvitation){
     let nl = (100-pl)/2;
     let nt = (100-pt)/2;
     console.log(idInvitation);
-    let getFeedback = await fetch(`http://matter-app.herokuapp.com/api/v1/invitations/${idInvitation}/feedback`);
+    let getFeedback = await fetch(`https://matter-app.herokuapp.com/api/v1/invitations/${idInvitation}/feedback`);
     let feedbackRqs = await getFeedback.json();
 
     const createTabsFeedback = document.createElement('div');
